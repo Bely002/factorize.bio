@@ -106,12 +106,62 @@ header {
 .button-1:hover::before {
     transform: translateY(0);
 }
+.timeline {
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 200px;
+}
 
 .timeline::before {
     content: '';
     position: absolute;
     height: 100%;
-    width: 2px;
-    background-color: red;
+    width: 5px;
+    background-color: var(--secondary-color);
     top: 0;
+}
+
+.timeline-element {
+    width: 50%;
+    height: fit-content;
+    margin-block: 50px;
+    position: relative;
+    & h3 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+    & p {
+        line-height: 1.5;
+    }
+}
+
+.timeline-element::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: solid 5px var(--secondary-color);
+    border-radius: 25px;
+}
+
+.timeline-element:nth-child(2n+1) {
+    text-align: left;
+    transform: translateX(calc(50% + 50px));
+}
+.timeline-element:nth-child(2n+1)::before {
+    top: 0;
+    left: -70px;
+}
+.timeline-element:nth-child(2n) {
+    text-align: right;
+    transform: translateX(calc(-50% - 50px));
+}
+.timeline-element:nth-child(2n)::before {
+    top: 0;
+    right: -70px;
 }
