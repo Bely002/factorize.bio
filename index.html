@@ -8,106 +8,130 @@
 </head>
 <body>
     <header>
-        <a href="./index.html"><h1 style="color: var(--main-color); cursor: pointer;">factorize<span style="color: var(--secondary-color);">.</span>bio</h1></a>
+        <a href="./index.html"><img src="./Assets/Images/logoFactorize.png" alt="factorize.bio logo" style="height: 75px"></a>
         <ul style="display: flex;">
+<<<<<<< HEAD
+=======
+            <li><a class="navLink" href="#technology">Technology</a></li>
+>>>>>>> f32c2dd (review)
             <li><a class="navLink" href="#values">Values</a></li>
-            <li><a class="navLink" href="#team">Team</a></li>
-            <li><a class="navLink" href="#contact">Contact</a></li>
+            <li><a class="navLink" href="#team">About us</a></li>
         </ul>
     </header>
-    <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center; height: 100vh; width: 100vw; position: relative;">
-        <img src="./Assets/Images/background.jpg" id="background">
+    <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center; height: 100vh; width: 100vw; position: relative; background-color: rgba(74, 133, 229, 0.5);">
         <h1 style="color: white;  font-size: 7rem;">factorize<span style="color: var(--secondary-color);">.</span>bio</h1>
         <p style="color: white; font-size: 1.2rem; margin-bottom: 30px;">To cure all diseases and prolong human life.</p>
-        <a href="#mission" class="button-1">Discover</a>
+        <a href="#accelerating-drug-discovery" class="button-1">Discover</a>
     </div>
 
-    <!-- Section - Mission -->
+    <!-- Section - Accelerating Drug Discovery -->
 
-    <div id="mission" style="height: fit-content;width: 100vw; background-color: white; display: flex;align-items: stretch;justify-content: center; position: relative; padding: 200px;">
-        <div style="flex:1; margin-right: 20px;">
-
-            <!-- Title -->
-            <h2  style="font-size: 3rem; margin-bottom: 30px;">Our Mission</h2>
-
-            <!-- Paragraph -->
-            <p style="line-height: 2.5;">Driven by excellence and a passion for fundamental science, our mission is to improve the way the fields of <b>AI</b>, <b>data science</b>, and <b>protein engineering</b> are connected. We are developing a unique <b>AI-plateform</b> based on our groundbreaking research on protein sequence variation and functionality. Our technology leverages recent advances in protein-specific large language models and graph neural networks to conduct drug discovery based solely on the protein sequence of an identified target. Our aim is to simplify and accelerate early-stage discovery, reducing failure rates, resource use, and energy consumption.</p>
+    <div id="accelerating-drug-discovery" style="height: fit-content;width: 100vw; background-color: white; position: relative; padding: 0 200px; display: flex; justify-content: center; align-items: start;">
+        <div style="position: sticky; height: 100vh; display: flex;flex-direction: column;align-items: center;justify-content: center; top: 0;">
+            <h2 style="font-size: 3rem; margin-bottom: 30px;">Accelerating Drug Discovery</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">We are building the world’s first complete interaction map of all human proteins and the ultra-large make-on-demand molecule space.
+                <br>
+                Our technology enables the instantaneous lookup of actionable hits for any human protein.
+            </p>
         </div>
-        <div style="flex:1;">
-            <img src="./Assets/Images/background.jpg" style="height: 100%; width: 100%; object-fit: cover; border-radius: 10px; box-shadow: 15px 15px 0 var(--secondary-color);">
+        <div>
+            <div class="card-info">
+                <p>Ultra-fast and cheap.</p>
+            </div>
+            <div class="card-info">
+                <p>Suitable to proteins previously considered undruggable, with no prior structural information required</p>
+            </div>
+            <div class="card-info">
+                <p>Enable the full potential for novelty from the Enamine REAL space</p>
+            </div>
         </div>
+    </div>
+
+    <!-- Section - Technology -->
+
+    <div id="technology" style="height: fit-content;width: 100vw; background-color: rgb(121, 121, 121); position: relative; padding: 200px; text-align: center;">
+        <!-- Title -->
+        <h2  style="font-size: 3rem; margin-bottom: 30px; color: white;">Our Technology</h2>
+
+        <!-- Paragraph -->
+        <p style="color: white; font-size: 1.2rem;">
+            Driven by our scientific discoveries that high-quality, large-scale experimental data on protein sequence variation can reveal protein structure and function, pinpoint allosteric drug target sites, and distinguish compound interaction selectivity, we leverage the latest advancements in protein language AI models. 
+            <br><br>
+            We have curated and processed a large dataset of protein sequences and associated experimental data, enabling us to train state-of-the-art models capable of predicting protein properties and interactions with unprecedented accuracy.
+        </p>
     </div>
 
     <!-- Section - Values -->
 
-    <div id="values" style="height: fit-content; width: 100vw; background-color: rgba(255, 255, 255, 0.9); display: flex; flex-direction: column;justify-content: center;align-items: center; position: relative; padding-top: 100px;">
+    <div id="values" style="height: fit-content; width: 100vw; background-color: rgba(255, 255, 255, 0.9); display: flex; flex-direction: column;justify-content: center;align-items: center; position: relative; padding-top: 100px; padding-inline: 200px;">
         <h2 style="margin-bottom: 100px; font-size: 3rem;">Our Values</h2>
-        <ul class="timeline">
-            <li class="timeline-element" style="margin-top: 0;">
-                <h3>Innovation</h3>
-                <p>We are dedicated to developing cutting-edge technologies and creative solutions that drive progress and transformation.</p>
-            </li>
-            <li class="timeline-element">
-                <h3>Equality</h3>
-                <p>We foster a diverse, inclusive environment where all voices are valued, ensuring that our contributions benefit everyone.</p>
-            </li>
-            <li class="timeline-element">
-                <h3>Scientific Excellence</h3>
-                <p>We uphold the highest standards of rigor and quality in our research and development efforts.</p>
-            </li>
-            <li class="timeline-element">
-                <h3>Precision</h3>
-                <p>We prioritize accuracy and attention to detail in all aspects of our work, ensuring reliable and consistent outcomes.</p>
-            </li>
-            <li class="timeline-element">
-                <h3>Impact</h3>
-                <p>We are committed to making a significant, positive difference, focusing on solutions that improve quality of life and sustainability.</p>
-            </li>
-        </ul>
+        <div style="display: grid; height: 400px; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; width: 100%; gap: 20px;">
+            <div class="card-value" style="grid-column: 1 / 4;"><h3>Innovation</h3><p>We are dedicated to developing cutting-edge technologies and creative solutions that drive progress, transformation and sustainability.</p></div>
+            <div class="card-value" style="grid-column: 4 / 6; grid-row: 1 / 4;"><h3>Equality</h3><p>We foster a diverse, inclusive environment where all voices are valued, ensuring that our contributions benefit everyone.</p></div>
+            <div class="card-value" style="grid-column: 1 / 2; grid-row: 2 / 4;"><h3>Impact</h3><p>We are committed to making a significant, positive difference, focusing on solutions that improve quality of life and sustainability.</p></div>
+            <div class="card-value" style="grid-column: 2 / 4; "><h3>Scientific Excellence</h3><p>We uphold the highest standards of rigor and quality in our research and development efforts.</p></div>
+            <div class="card-value" style="grid-column: 2 / 4;"><h3>Precision</h3><p>We prioritize accuracy and attention to detail in all aspects of our work, ensuring reliable and consistent outcomes.</p></div>
+        </div>
     </div>
 
     <!-- Section - Team -->
 
     <div id="team" style="background-color: white; padding: 100px 200px; height: fit-content;">
-        <h2 style="text-align: center; font-size: 3rem; margin-bottom:100px;">Meet the team</h2>
-        <div style="display: flex; justify-content: center;">
-            <a class="card" href="https://www.linkedin.com/in/j%C3%B6rn-schmiedel-9175931b1/ " target="_blank">
+        <h2 style="text-align: center; font-size: 3rem; margin-bottom:30px;">About us</h2>
+        <p style="margin-bottom: 50px; text-align: center;">Driven by our passion to discover the unknown and our expertise in AI, data science, protein science, and chemistry, our mission is to accelerate and democratize early-stage drug discovery.</p>
+        <div style="display: flex; justify-content: center; overflow: visible;">
+            <a class="card" href="https://www.linkedin.com/in/j%C3%B6rn-schmiedel-9175931b1/" target="_blank">
                 <div class="portrait">
                     <img src="./Assets/Images/JornSchmiedel.jpeg" alt="Photo of Jorn Schmiedel" style="width: 100%; height: 100%; object-fit: cover;">
                     <img src="./Assets/Icons/linkedin.png" alt="Linkedin logo" class="linkedin">
+                    <p>
+                        Jörn is a biophysicist with research experience in molecular & computational biology, data science, and drug discovery at Humboldt University, Harvard Medical School, MIT, Max Planck Institute, and the Centre for Genomic Regulation. His research has been published in the most renowned scientific journals (Nature, Science, and Cell amongst others) and recognized with numerous awards.
+                        <br>Before starting factorize.bio, Jörn worked as a consultant and AI/data science team lead in the drug discovery industry for more than 3 years.
+                    </p>
                 </div>
-                <h3>Jörn Schmiedel</h3>
-                <p>FOUNDER</p>
+                <h3>Dr. Jörn Schmiedel</h3>
+                <p>CO-FOUNDER, CEO</p>
             </a>
-            <a class="card" href="https://www.linkedin.com/in/kajetan-bentele/ " target="_blank">
+            <a class="card" href="https://www.linkedin.com/in/kajetan-bentele/" target="_blank">
                 <div class="portrait">
                     <img src="./Assets/Images/KajetanBentele.jpeg" alt="Photo of Kajetan Bentele" style="width: 100%; height: 100%; object-fit: cover;">
                     <img src="./Assets/Icons/linkedin.png" alt="Linkedin logo" class="linkedin">
+                    <p>Kajetan is a physicist with research experience in molecular & computational biology and machine learning at Humboldt University, Max Planck Institute, and the Weizmann Institute.
+                        <br>>efore starting factorize.bio, Kajetan built and led AI engineering teams in the big data industry for more than 6 years.
+                    </p>
                 </div>
-                <h3>Kajetan Bentele</h3>
-                <p>FOUNDER</p>
+                <h3>Dr. Kajetan Bentele</h3>
+                <p>CO-FOUNDER, CTO</p>
+            </a>
+            <a class="card" href="https://www.linkedin.com/in/julia-revillo-imbernon/" target="_blank">
+                <div class="portrait">
+                    <img src="./Assets/Images/JuliaRevillo.jpeg" alt="Photo of Kajetan Bentele" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="./Assets/Icons/linkedin.png" alt="Linkedin logo" class="linkedin">
+                    <p>
+                        Julia is a chemist with research experience in organic chemistry, cheminformatics, and structure-based drug discovery at the University of Strasbourg, Nanyang Technological University Singapore, and Sanofi.
+                    </p>
+                </div>
+                <h3>Dr. Julia Revillo Imbernon</h3>
             </a>
         </div>
     </div>
-
-    <!-- Section - Contact -->
-
-    <div id="contact"  style="height: fit-content; padding: 100px 200px; background-color: white;">
-        <h2 style="font-size: 3rem; margin-bottom: 50px;">Contact</h2>
-        <div style="margin-left: 30px; display: flex; height: 100px; align-items: center;">
-            <div style="margin-right: 30px;">
-                <h3>Jörn Schmiedel</h3>
-                <p>joern@factorize.bio</p>
-            </div>
-            <a href="https://www.linkedin.com/in/j%C3%B6rn-schmiedel-9175931b1/" target="_blank"><img src="./Assets/Icons/linkedin.png" alt="Linkedin logo" style="height: 100%;"></a>
-        </div>
-        <div style="margin-left: 30px; display: flex; height: 100px; align-items: center;">
-            <div style="margin-right: 30px;">
-                <h3>Kajetan Bentele</h3>
-                <p>kajetan@factorize.bio</p>
-            </div>
-            <a href="https://www.linkedin.com/in/kajetan-bentele/ " target="_blank"><img src="./Assets/Icons/linkedin.png" alt="Linkedin logo" style="height: 100%;"></a>
+    <div style="padding: 0 200px; margin-bottom: 100px;">
+        <div style="padding: 30px; height: fit-content; width: 100%; background-color:rgba(74, 133, 229, 0.5); border-radius: 10px;">
+            <h2 style=" font-size: 3rem; margin-bottom:30px; color: white;">Join us</h2>
+            <p style="font-size: 1.2rem; color: white;">Do you want to play a pivotal part in transforming the field of drug discovery? Please reach out to us.</p>
         </div>
     </div>
+    <footer>
+        <div>
+            <img src="./Assets/Images/logoFactorize.png" width="200px">
+            <div>
+                <h3>Contact</h3>
+                <p>hdhwudh</p>
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+    </footer>
 </body>
 </html>
+
