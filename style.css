@@ -14,13 +14,12 @@ html {
 }
 
 :root {
-    --main-color:#1d18f8;
+    --main-color:rgb(74, 134, 229);
     --secondary-color:#42e4ba;
 }
 
 body {
     background-color: white;
-    overflow-x:hidden;
 }
 
 
@@ -28,7 +27,7 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
-    height: fit-content;
+    height: 120px;
     padding: 30px 200px;
     display: flex;
     align-items: center;
@@ -68,14 +67,6 @@ header {
     color: var(--secondary-color);
 }
 
-#background {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-}
-
 .button-1 {
     position: relative;
     padding: 10px 50px ;
@@ -107,68 +98,28 @@ header {
 .button-1:hover::before {
     transform: translateY(0);
 }
-.timeline {
-    height: fit-content;
-    position: relative;
+
+.card-info {
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-inline: 200px;
+    margin-left: 20px;
+    font-size: 1.2rem;
 }
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 5px;
-    background-color: var(--secondary-color);
-    top: 0;
-}
-
-.timeline-element {
-    width: 50%;
+.card-info p{
+    width: 30vw;
     height: fit-content;
-    margin-block: 50px;
-    position: relative;
-    & h3 {
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-    }
-    & p {
-        line-height: 1.5;
-    }
-}
-
-.timeline-element::before {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border: solid 5px var(--secondary-color);
-    border-radius: 25px;
-}
-
-.timeline-element:nth-child(2n+1) {
-    text-align: left;
-    transform: translateX(calc(50% + 50px));
-}
-.timeline-element:nth-child(2n+1)::before {
-    top: 0;
-    left: -70px;
-}
-.timeline-element:nth-child(2n) {
-    text-align: right;
-    transform: translateX(calc(-50% - 50px));
-}
-.timeline-element:nth-child(2n)::before {
-    top: 0;
-    right: -70px;
+    padding: 50px 100px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    text-align: center;
+    color: white;
 }
 
 .card {
-    margin-inline: 50px;
+    margin-inline: 20px;
     position: relative;
     height: 500px;
     width: 300px;
@@ -179,14 +130,32 @@ header {
         width: 100%;
         margin-bottom: 10px;
         position: relative;
+        overflow: hidden;
+        & p {
+            position: absolute;
+            top: 0;
+            transition: transform 0.5s;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(121,121,121,0.7);
+            transform: translateY(-100%);
+            padding: 10px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
     & h3 {
         font-size: 1.4rem;
         margin-bottom: 5px;
     }
-    & p {
+    & >p {
         letter-spacing: 3px;
     }
+}
+.portrait:hover p {
+    transform: translateY(0);
 }
 .card::before {
     content: '';
@@ -206,4 +175,48 @@ header {
     left: 10px;
     height: 50px;
     width: 50px;
+}
+
+
+.card-value {
+    background-color: rgba(74, 133, 229, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-inline: 20px;
+    cursor: pointer;
+    & h3 {
+        color: white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s;
+        font-size: 1.3rem;
+    }
+    & p {
+        color: white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s;
+    }
+}
+.card-value:hover h3 {
+    transform: translateY(-100%);
+}
+.card-value:hover p {
+    transform: translateY(-100%);
+}
+
+footer {
+    height: fit-content;
+    padding: 20px 200px;
+    box-shadow: 0 0 5px var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
 }
