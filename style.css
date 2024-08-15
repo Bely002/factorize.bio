@@ -178,7 +178,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(0.8rem,5vw,1.2rem);
+    font-size: clamp(0.8rem,2vw,1.2rem);
     margin-block: 10px;
     width: 30vw;
     padding: 50px 100px;
