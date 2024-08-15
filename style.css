@@ -304,6 +304,14 @@ footer {
     justify-content: center; 
     align-items: center;
 }
+#technology {
+    height: fit-content;
+    width: 100vw; 
+    background-color: rgb(121, 121, 121); 
+    position: relative; 
+    padding: 200px; 
+    text-align: center;
+}
 
 @media screen and (max-width:1000px) {
     header {
@@ -320,6 +328,9 @@ footer {
             width: 100%;
             padding: 20px;
         }
+    }
+    #technology {
+        padding: 50px 5vw;
     }
 }
 @media screen and (max-width:740px) {
