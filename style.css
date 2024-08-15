@@ -250,42 +250,6 @@ header {
     width: 50px;
 }
 
-
-.card-value {
-    background-color: var(--main-color);
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    padding-inline: 20px;
-    cursor: pointer;
-    & h3 {
-        color: white;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: transform 0.5s;
-        font-size: 1.3rem;
-    }
-    & p {
-        color: white;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: transform 0.5s;
-    }
-}
-.card-value:hover h3 {
-    transform: translateY(-100%);
-}
-.card-value:hover p {
-    transform: translateY(-100%);
-}
-
 footer {
     height: fit-content;
     padding: 20px 200px;
@@ -312,6 +276,62 @@ footer {
     padding: 200px; 
     text-align: center;
 }
+#values {
+    height: fit-content; 
+    width: 100vw; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    position: relative; 
+    padding: 100px 200px; 
+}
+
+@media screen and (min-width:1001px) {
+    #gridvalues {
+        display: grid; 
+        height: 400px; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        width: 100%; 
+        gap: 20px;
+    }
+    .card-value {
+        background-color: var(--main-color);
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        padding-inline: 20px;
+        cursor: pointer;
+        & h3 {
+            color: white;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s;
+            font-size: 1.3rem;
+        }
+        & p {
+            color: white;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s;
+        }
+    }
+    .card-value:hover h3 {
+        transform: translateY(-100%);
+    }
+    .card-value:hover p {
+        transform: translateY(-100%);
+    }
+}
 
 @media screen and (max-width:1000px) {
     header {
@@ -331,6 +351,29 @@ footer {
     }
     #technology {
         padding: 50px 5vw;
+    }
+    #values {
+        padding: 50px 5vw;
+    }
+    #gridvalues {
+        display: flex;
+        flex-direction: column;
+        & .card-value {
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+        & .card-value::before {
+            content: '';
+            background-color: var(--secondary-color);
+            width: 50px;
+            height: 10px;
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
     }
 }
 @media screen and (max-width:740px) {
