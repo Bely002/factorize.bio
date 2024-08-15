@@ -206,6 +206,7 @@ header {
         overflow: hidden;
         & p {
             position: absolute;
+            text-align: justify;
             top: 0;
             transition: transform 0.5s;
             height: 100%;
@@ -287,7 +288,15 @@ footer {
     position: relative; 
     padding: 100px 200px; 
 }
-
+#about {
+    background-color: white; 
+    padding: 100px 200px; 
+    height: fit-content;
+}
+#joinus {
+    padding: 0 200px; 
+    margin-bottom: 100px;
+}
 @media screen and (min-width:1001px) {
     #gridvalues {
         display: grid; 
@@ -374,6 +383,13 @@ footer {
             right: 0;
             margin: auto;
         }
+    }
+    #about {
+        padding: 50px 5vw;
+    }
+    #joinus {
+        padding: 50px 5vw;
+        text-align: center;
     }
 }
 @media screen and (max-width:740px) {
