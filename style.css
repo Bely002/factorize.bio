@@ -35,6 +35,48 @@ header {
     background-color: white;
     box-shadow: 0 0 5px var(--secondary-color);
     z-index: 10;
+    & ul {
+        display: flex;
+    }
+    & img {
+        height: 60px;
+    }
+}
+.burger {
+    width: 36px;
+    aspect-ratio: 1 / 1;
+    display: none;
+    cursor: pointer;
+    position: relative;
+    & span {
+        position: absolute;
+        width: 100%;
+        height: 6px;
+        border-radius: 3px;
+        background-color: var(--main-color);
+        transition: 0.5s;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform-origin: center;
+        margin: auto;
+    }
+}
+.burger span:nth-child(1) {
+    transform: translateY(-10px);
+}
+.burger span:nth-child(3) {
+    transform: translateY(10px);
+}
+.burger.clicked span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+.burger.clicked span:nth-child(2) {
+    opacity: 0;
+}
+.burger.clicked span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
 }
 
 .navLink {
@@ -250,4 +292,51 @@ footer {
     box-shadow: 0 0 5px var(--secondary-color);
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width:1000px) {
+    header {
+        padding-inline: 5vw;
+    }
+}
+@media screen and (max-width:740px) {
+    header {
+        & img {
+            max-width: 50vw;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        & ul {
+            position: absolute;
+            top: 120px;
+            left: 0;
+            flex-direction: column;
+            height: calc(100vh - 120px);
+            width: 100%;
+            background-color: white;
+            transform: translateX(100vw);
+            transition: transform 0.5s;
+            & li {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                & .navLink {
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    padding-block: 20px;
+                }
+                & .navLink::before {
+                    display: none;
+                }
+            }
+        }
+        & ul.clicked {
+            transform: translateX(0);
+        }
+        & .burger {
+            display: flex;
+        }
+    }
 }
