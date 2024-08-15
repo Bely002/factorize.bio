@@ -193,6 +193,7 @@ header {
 
 .card {
     margin-inline: 20px;
+    margin-bottom: 20px;
     position: relative;
     height: 500px;
     width: 300px;
