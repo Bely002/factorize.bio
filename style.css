@@ -178,7 +178,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: clamp(0.8rem,5vw,1.2rem);
     margin-block: 10px;
     width: 30vw;
     padding: 50px 100px;
@@ -294,9 +294,31 @@ footer {
     justify-content: space-between;
 }
 
+#accelerating-drug-discovery {
+    height: fit-content;
+    width: 100vw; 
+    background-color: white; 
+    position: relative; 
+    padding: 200px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
 @media screen and (max-width:1000px) {
     header {
         padding-inline: 5vw;
+    }
+    #accelerating-drug-discovery {
+        padding: 50px 5vw;
+        flex-direction: column;
+        text-align: center;
+        & >div {
+            width: 100%;
+        }
+        & .card-info {
+            width: 100%;
+        }
     }
 }
 @media screen and (max-width:740px) {
