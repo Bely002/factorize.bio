@@ -181,7 +181,7 @@ header {
     font-size: clamp(0.8rem,2vw,1.2rem);
     margin-block: 10px;
     width: 30vw;
-    padding: 50px 100px;
+    padding: 30px 50px;
     border-radius: 10px;
     background-color:  var(--secondary-color);
     font-weight: bold;
