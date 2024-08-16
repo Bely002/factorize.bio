@@ -297,7 +297,7 @@ footer {
     width: 100vw; 
     background-color: rgb(121, 121, 121); 
     position: relative; 
-    padding: 200px; 
+    padding: 150px 200px; 
     text-align: center;
 }
 #values {
@@ -309,12 +309,15 @@ footer {
     justify-content: center;
     align-items: center; 
     position: relative; 
-    padding: 100px 200px; 
+    padding: 150px 200px; 
+    padding-bottom: 0;
+
 }
 #about {
     background-color: white; 
-    padding: 100px 200px; 
+    padding: 150px 150px; 
     height: fit-content;
+    padding-bottom: 100px;
 }
 #joinus {
     padding: 0 200px; 
