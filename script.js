@@ -6,6 +6,10 @@ burger.addEventListener("click",()=>{
     burgerClicked=!burgerClicked
     loadBurger()
 })
+document.addEventListener("scroll",(event)=>{
+    burgerClicked=false
+    loadBurger()
+})
 
 function loadBurger() {
     if(burgerClicked) {
