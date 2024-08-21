@@ -21,7 +21,16 @@ html {
 body {
     background-color: white;
 }
-
+h2 {
+    font-size: clamp(1.5rem,7vw,3rem);
+}
+p {
+    font-size: 1.2rem;
+}
+.delimitation {
+    width: 100%;
+    max-width: 1100px;
+}
 
 header {
     position: fixed;
@@ -31,7 +40,7 @@ header {
     padding: 30px 200px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: white;
     box-shadow: 0 0 5px var(--secondary-color);
     z-index: 10;
@@ -109,7 +118,7 @@ header {
     color: var(--secondary-color);
 }
 
-.button-1 {
+.button {
     position: relative;
     padding: 10px 50px ;
     background-color: white;
@@ -122,7 +131,7 @@ header {
     overflow: hidden;
     transition: color 0.3s;
 }
-.button-1::before {
+.button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -134,45 +143,29 @@ header {
     transform: translateY(100%);
     transition:  transform 0.3s;
 }
-.button-1:hover {
+.button:hover {
     color: white;
 }
-.button-1:hover::before {
+.button:hover::before {
     transform: translateY(0);
 }
-
-.button-2 {
-    width: fit-content;
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px 50px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    line-height: normal;
-    font-weight: bold;
-    color: black;
-    overflow: hidden;
-    position: relative;
-}
-.button-2::before {
-    content: 'contact@factorize.bio';
-    background-color: var(--secondary-color);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.contactbtn::before {
+    z-index: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    transform: translateY(100%);
-    transition: transform 0.3s;
-}
-.button-2:hover::before {
-    transform: translateY(0);
+    content: "contact@factorize.bio";
 }
 
+.section {
+    height: fit-content;
+    width: 100vw; 
+    position: relative; 
+    padding: 150px 200px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
 .card-info {
     height: fit-content;
     display: flex;
@@ -190,24 +183,72 @@ header {
         color: white;
     }
 }
-
+@media screen and (min-width:1001px){
+    #gridvalues {
+        display: grid; 
+        height: 400px; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        width: 100%; 
+        gap: 20px;
+        & .card-value {
+            background-color: var(--main-color);
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding-inline: 20px;
+            cursor: pointer;
+            & h3 {
+                color: white;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: transform 0.5s;
+                font-size: 1.3rem;
+            }
+            & p {
+                color: white;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: transform 0.5s;
+            }
+        }
+    }
+    .card-value:hover h3 {
+        transform: translateY(-100%);
+    }
+    .card-value:hover p {
+        transform: translateY(-100%);
+    }
+}
 .card {
     margin-inline: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     position: relative;
-    height: 450px;
-    width: 250px;
+    flex: 1;
+    min-height: 450px;
+    min-width: 250px;
+    max-width: 300px;
+    max-height: 500px;
     text-align: center;
+    height: fit-content;
     cursor: pointer;
     & .portrait {
-        height: 350px;
         width: 100%;
+        aspect-ratio: 1 / 1.2;
         margin-bottom: 10px;
         position: relative;
         overflow: hidden;
         & p {
+            overflow: scroll;
             position: absolute;
-            text-align: justify;
+            text-align: start;
             top: 0;
             transition: transform 0.5s;
             height: 100%;
@@ -219,6 +260,7 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1rem;
         }
     }
     & h3 {
@@ -238,7 +280,7 @@ header {
     width: 40px;
     height: 5px;
     background-color: var(--secondary-color);
-    bottom: 0;
+    bottom: -20px;
     left: 0;
     right: 0;
     margin: auto;
@@ -281,93 +323,6 @@ footer {
         margin-block: 10px;
     }
 }
-
-#accelerating-drug-discovery {
-    height: fit-content;
-    width: 100vw; 
-    background-color: white; 
-    position: relative; 
-    padding: 200px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-}
-#technology {
-    height: fit-content;
-    width: 100vw; 
-    background-color: rgb(121, 121, 121); 
-    position: relative; 
-    padding: 150px 200px; 
-    text-align: center;
-}
-#values {
-    height: fit-content; 
-    width: 100vw; 
-    background-color: rgba(255, 255, 255, 0.9); 
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    position: relative; 
-    padding: 150px 200px; 
-    padding-bottom: 0;
-
-}
-#about {
-    background-color: white; 
-    padding: 150px 150px; 
-    height: fit-content;
-    padding-bottom: 100px;
-}
-#joinus {
-    padding: 0 200px; 
-    margin-bottom: 100px;
-}
-@media screen and (min-width:1001px) {
-    #gridvalues {
-        display: grid; 
-        height: 400px; 
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr; 
-        width: 100%; 
-        gap: 20px;
-    }
-    .card-value {
-        background-color: var(--main-color);
-        border-radius: 10px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        padding-inline: 20px;
-        cursor: pointer;
-        & h3 {
-            color: white;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.5s;
-            font-size: 1.3rem;
-        }
-        & p {
-            color: white;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.5s;
-        }
-    }
-    .card-value:hover h3 {
-        transform: translateY(-100%);
-    }
-    .card-value:hover p {
-        transform: translateY(-100%);
-    }
-}
-
 @media screen and (max-width:1000px) {
     header {
         padding-inline: 5vw;
@@ -375,8 +330,7 @@ footer {
     footer {
         padding-inline: 5vw;
     }
-    #accelerating-drug-discovery {
-        padding: 50px 5vw;
+    #accelerating-drug-discovery>div {
         flex-direction: column;
         text-align: center;
         & >div {
@@ -387,10 +341,7 @@ footer {
             padding: 20px;
         }
     }
-    #technology {
-        padding: 50px 5vw;
-    }
-    #values {
+    .section {
         padding: 50px 5vw;
     }
     #gridvalues {
@@ -412,13 +363,6 @@ footer {
             right: 0;
             margin: auto;
         }
-    }
-    #about {
-        padding: 50px 5vw;
-    }
-    #joinus {
-        padding: 50px 5vw;
-        text-align: center;
     }
 }
 @media screen and (max-width:740px) {
