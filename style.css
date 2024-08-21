@@ -184,6 +184,9 @@ header {
     }
 }
 @media screen and (min-width:1001px){
+    #values>div {
+        min-width: 870px;
+    }
     #gridvalues {
         display: grid; 
         height: 400px; 
