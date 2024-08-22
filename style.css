@@ -264,7 +264,7 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1vw;
+            font-size: clamp(13px,1vw,20px);
         }
     }
     & h3 {
@@ -370,6 +370,9 @@ footer {
     }
 }
 @media screen and (max-width:740px) {
+    footer>div {
+        flex-direction: column;
+    }   
     header {
         & img {
             max-width: 50vw;
