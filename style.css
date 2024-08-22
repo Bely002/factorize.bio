@@ -304,17 +304,20 @@ footer {
     padding: 20px 200px;
     border-top: solid 2px var(--secondary-color);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     gap: 100px;
     position: relative;
-    & div>div {
-        display: flex;
-        flex-direction: column;
-        & img {
-            max-height: 100px;
-            object-fit: contain;
+    & div {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        & div>div {
+            display: flex;
+            flex-direction: column;
+            & img {
+                max-height: 100px;
+                object-fit: contain;
+            }
         }
     }
     & h3 {
@@ -371,13 +374,13 @@ footer {
     }
 }
 @media screen and (max-width:740px) {
-    footer {
+    footer>div {
         justify-content: center;
         text-align: center;
     }
-    footer>div {
+    footer>div>div {
         flex-direction: column;
-    }   
+    }     
     header {
         & img {
             max-width: 50vw;
