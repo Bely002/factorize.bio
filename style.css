@@ -182,6 +182,7 @@ header {
     text-align: center;
     & p {
         color: white;
+        width:calc(clamp(0,30vw,500px) - 50px)
     }
 }
 @media screen and (min-width:1001px){
