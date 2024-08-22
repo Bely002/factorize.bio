@@ -174,7 +174,7 @@ header {
     justify-content: center;
     font-size: clamp(0.8rem,2vw,1.2rem);
     margin-block: 10px;
-    width: 30vw;
+    width: clamp(0,30vw,500px);
     padding: 30px 50px;
     border-radius: 10px;
     background-color:  var(--secondary-color);
