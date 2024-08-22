@@ -370,6 +370,10 @@ footer {
     }
 }
 @media screen and (max-width:740px) {
+    footer {
+        justify-content: center;
+        text-align: center;
+    }
     footer>div {
         flex-direction: column;
     }   
