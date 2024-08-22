@@ -264,7 +264,7 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: clamp(13px,1vw,20px);
+            font-size: clamp(13px,1vw,18px);
         }
     }
     & h3 {
