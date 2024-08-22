@@ -307,7 +307,8 @@ footer {
     justify-content: center;
     gap: 100px;
     position: relative;
-    & div {
+    & >div {
+        display:flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
